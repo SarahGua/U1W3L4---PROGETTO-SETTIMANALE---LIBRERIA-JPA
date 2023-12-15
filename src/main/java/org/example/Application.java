@@ -20,6 +20,7 @@ public class Application {
         ElementDAO ed = new ElementDAO(em);
 
         Books CimeTempestose = new Books("Cime Tempestose", 1847, 580, "Emily Bronte", "Romanzo");
+        Books DeProfundis = new Books("De Profundis", 1905, 90, "Oscar Wild", "Lettera");
         Books NinteenEightyFour = new Books("1984", 1949, 500, "George Orwell", "Romanzo");
         Books IlRitrattoDiDorianGrey = new Books("Il ritratto di Dorian Grey", 1890, 430, "Oscar Wild", "Romanzo");
         Books IlPiccoloPrincipe = new Books("Il Piccolo Principe", 1843, 210, "Antoine de Saint-Exupéry", "Racconto");
@@ -34,11 +35,16 @@ public class Application {
 //        ed.addElement(Internazionale);
 //        ed.addElement(Focus);
 //        ed.addElement(Vogue);
+//        ed.addElement(DeProfundis);
+
 
 //        ed.removeElementByISBN(3122094b-1a4b-45d8-b307-b0baaafbea0b);
 
 //        ed.findByYear(1993).forEach(System.out::println);
 
+//        ed.finByAuthor("Oscar Wild").forEach(System.out::println);
+
+        ed.findByTitle("c").forEach(System.out::println);
 
 
     }

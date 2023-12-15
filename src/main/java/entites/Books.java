@@ -23,9 +23,6 @@ public class Books extends Element{
 
     public Books() {}
 
-    public Books(String ilPiccoloPrincipe, int i, int numberPages, String author, String racconto) {
-    }
-
     @Override
     public String toString() {
         return "Books{" +

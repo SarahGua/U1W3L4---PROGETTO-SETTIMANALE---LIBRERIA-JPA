@@ -41,4 +41,16 @@ public class ElementDAO {
         getElementByYear.setParameter("year", pubblicationYear);
         return getElementByYear.getResultList();
     }
+
+    public List<Element> finByAuthor(String author){
+        TypedQuery<Element> getElementByAuthor = em.createNamedQuery("findByAuthor", Element.class);
+        getElementByAuthor.setParameter("author", author);
+        return getElementByAuthor.getResultList();
+    }
+
+    public  List<Element> findByTitle(String title){
+        TypedQuery<Element> getElementByTitle = em.createNamedQuery("findByTitle", Element.class);
+        getElementByTitle.setParameter("partialName", "%" + title + "%");
+        return getElementByTitle.getResultList();
+    }
 }

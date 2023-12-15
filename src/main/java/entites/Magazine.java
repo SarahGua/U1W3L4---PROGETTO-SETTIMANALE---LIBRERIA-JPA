@@ -18,9 +18,6 @@ public class Magazine extends Element{
 
     public Magazine() {}
 
-    public Magazine(String focus, int i, int numberPages, Periodicity periodicity) {
-    }
-
     public Periodicity getPeriodicity() {
         return periodicity;
     }
@@ -33,6 +30,10 @@ public class Magazine extends Element{
     public String toString() {
         return "Magazine{" +
                 "periodicity=" + periodicity +
+                ", ISBN=" + ISBN +
+                ", title='" + title + '\'' +
+                ", pubblicationYear=" + pubblicationYear +
+                ", numberPages=" + numberPages +
                 '}';
     }
 }

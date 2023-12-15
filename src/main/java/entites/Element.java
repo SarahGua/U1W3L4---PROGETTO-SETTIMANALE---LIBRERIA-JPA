@@ -1,10 +1,11 @@
 package entites;
 
 import javax.persistence.*;
-import java.time.Year;
 import java.util.UUID;
 
-@NamedQueries(@NamedQuery(name = "findByYear", query = "SELECT a FROM Element a WHERE a.pubblicationYear = :year"))
+@NamedQuery(name = "findByYear", query = "SELECT a FROM Element a WHERE a.pubblicationYear = :year")
+@NamedQuery(name = "findByAuthor", query = "SELECT a FROM Element a WHERE a.author = :author")
+@NamedQuery(name = "findByTitle", query = "SELECT a FROM Element a WHERE LOWER(a.title) LIKE LOWER(:partialName)")
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 public abstract class Element {
